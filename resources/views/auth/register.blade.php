@@ -1,26 +1,24 @@
 @extends('layouts.logout')
 
 @section('content')
-
-{!! Form::open() !!}
-
 <h2>新規ユーザー登録</h2>
-
-{{ Form::label('ユーザー名') }}
+{!! Form::open() !!}
+@csrf
+{{ Form::label('ユーザー名','user name') }}
 {{ Form::text('username',null,['class' => 'input']) }}
 
-{{ Form::label('メールアドレス') }}
+{{ Form::label('メールアドレス','mailadress') }}
 {{ Form::text('mail',null,['class' => 'input']) }}
 
-{{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+{{ Form::label('パスワード','password') }}
+{{ Form::password('password',['class' => 'input']) }}
 
-{{ Form::label('パスワード確認') }}
-{{ Form::text('password-confirm',null,['class' => 'input']) }}
+{{ Form::label('パスワード確認','password comfirm') }}
+{{ Form::password('password-confirm',['class' => 'input']) }}
 
-{{ Form::submit('登録') }}
+{{ Form::submit('REGISTER',['class' => 'submit']) }}
 
-<p><a href="/login">ログイン画面へ戻る</a></p>
+<p class="logout_link"><a href="/login">ログイン画面に戻る</a></p>
 
 {!! Form::close() !!}
 

@@ -22,9 +22,9 @@
 <body>
   <header>
     <h1><img src="{{ asset('images/atlas.png') }}"></h1>
-    <h2>Social Network Service</h2>
+    <p class="header_SNS">Social Network Service</p>
   </header>
-  <div id="container">
+  <div class="container">
     @yield('content')
   </div>
   <script src="JavaScriptファイルのURL"></script>

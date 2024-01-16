@@ -1,10 +1,235 @@
 @charset "UTF-8";
-
-html{
-    height: 100%;
+/* フォント設定 */
+@font-face {
+	font-family: "YuGothic-M";
+	font-weight: normal;
+	 src: local("YuGothic-Medium"),
+		  local("Yu Gothic Medium"),
+		  local("YuGothic-Regular");
+}
+@font-face {
+	font-family: "YuGothic-M";
+	font-weight: bold;
+	 src: local("YoGothic-Bold"),
+		  local("Yu Gothic");
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	::i-block-chrome, body {
+		font-feature-settings: "pkna";
+	}
 }
 
+html{
+    font-size: 62.5%;/* 16px x 0.625 = 10px(=1rem) */
+}
 body{
-    height: 100%;
-    background: #186AC9;
+    min-height: 100vh;
+    font-size: 1.6rem;/* 16px */
+	font-family: -apple-system, blinkMacSystemFont, YuGothic-M, YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	-webkit-text-size-adjust: 100%;
+	font-feature-settings: "palt";
+    background: #0067C6;
+    background: linear-gradient(#0067C6, #51ABFE,75%, #FFE32C);
+}
+
+header{
+    text-align: center;
+    padding: 10% 0 5rem;
+}
+h1 {
+    max-width: 250px;
+    margin: 0 auto;
+}
+h1 img{
+    width: 100%;
+}
+.header_SNS{
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+.container{
+    max-width: 400px;
+    width: 30%;
+    margin: 0 auto 5rem;
+    padding: 3rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+h2{
+    font-size: 2rem;
+    text-align: center;
+}
+label{
+    display: block;
+    padding: 2rem 0 .5rem;
+}
+input{
+    width: 100%;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: #fff;
+    color: #333;
+}
+.submit{
+    display: block;
+    text-align: center;
+    background-color: #ED3A50;
+    border: 1px solid #ED3A50;
+    color: #fff;
+}
+input.submit{
+    width: 10rem;
+    margin: 2rem 0 0 auto;
+}
+.submit:hover{
+    transition: .1s;
+    background-color: #fff;
+    border: 1px solid #ED3A50;
+    color: #ED3A50;
+}
+.logout_link{
+    margin: 3rem 0 0;
+    text-align: center;
+}
+.logout_link a{
+    display: block;
+    padding: 1rem 0;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+}
+.logout_link a:hover{
+    transition: .1s;
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: #51ABFE;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* 新規登録後ユーザー名表示：added */
+.logout_adedd{
+    text-align: center;
+    line-height: 3rem;
+}
+.adedd_bold{
+    margin-bottom: 3rem;
+}
+.adedd_bold p{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.logout_adedd .submit{
+    display: inline-block;
+    width: 50%;
+    margin: 2rem auto;
+    padding: 1rem 0;
+    border-radius: 5px;
+}
+
+
+/* ブレイクポイント    デスクトップ画面PC:1280px~    ノートPC/タブレット:768px~    スマホ:~767px  */
+@media screen and (width <= 1280px) {
+    header{
+        padding: 2rem 0;
+    }
+    h1 {
+        max-width: 150px;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .header_SNS{
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    .container{
+        margin: 0 auto 2rem;
+        padding: 2rem;
+    }
+    .logout_link{
+        margin: 1.5rem 0 0;
+    }
+    label{
+        padding: 1.5rem 0 5px;
+    }
+    input{
+        padding: 5px 10px;
+    }
+    input.submit{
+        width: 12rem;
+        margin: 1rem 0 0 auto;
+    }
+    .adedd_bold{
+        margin-bottom: 1rem;
+    }
+    .logout_adedd .submit{
+        width: 60%;
+        padding: .5rem 0;
+    }
+}
+/* タブレット */
+@media screen and (width <= 768px) {
+    header{
+        padding: 2rem 0;
+    }
+    h1 {
+        max-width: 200px;
+    }
+    h1 img{
+        width: 100%;
+    }
+    .header_SNS{
+        font-size: 2rem;
+        margin-top: .5rem;
+    }
+    .container{
+        max-width: 700px;
+        width: 60%;
+        margin: 0 auto 3rem;
+        padding: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    label{
+        padding: 1.5rem 0 .5rem;
+    }
+    .logout_link{
+        margin: 2rem 0 0;
+    }
+
+    /* 新規登録後ユーザー名表示：added */
+    .logout_adedd{
+        line-height: 2rem;
+    }
+    .adedd_bold{
+        margin-bottom: 2rem;
+    }
+}
+/* スマホ */
+@media screen and (width <= 480px) {
+    h1 {
+        max-width: 150px;
+    }
+    h1 img{
+        width: 100%;
+    }
+    .header_SNS{
+        font-size: 2rem;
+        margin-top: .5rem;
+    }
+    .container{
+        max-width: 440px;
+        width: 90%;
+        margin: 0 auto 2rem;
+        padding: 2rem;
+    }
+    label{
+        padding: 2rem 0 1rem;
+    }
+    .logout_link{
+        margin: 2rem 0 0;
+    }
 }
