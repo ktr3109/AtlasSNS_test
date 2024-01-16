@@ -1,11 +1,31 @@
 @charset "utf-8";
-html{
+/* 共通 */
+.icon a img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
-body{
-}
+
+
+
 /* header */
-header{
-    background:#186AC9;
+header {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    z-index: 100;
+    background: #0067C6;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.logo-size {
+    width: 200px;
+}
+
+.logo-size img {
+    width: 100%;
 }
 
 /* main content */
