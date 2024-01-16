@@ -11,18 +11,18 @@
   <!--スマホ,タブレット対応-->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <!--サイトのアイコン指定-->
-  <link rel="icon" href="画像URL" sizes="16x16" type="image/png" />
-  <link rel="icon" href="画像URL" sizes="32x32" type="image/png" />
-  <link rel="icon" href="画像URL" sizes="48x48" type="image/png" />
-  <link rel="icon" href="画像URL" sizes="62x62" type="image/png" />
+  <link rel="icon" href="{{ asset('images/favicon/favicon_16.png') }}" sizes="16x16" type="image/png" />
+  <link rel="icon" href="{{ asset('images/favicon/favicon_32.png') }}" sizes="32x32" type="image/png" />
+  <link rel="icon" href="{{ asset('images/favicon/favicon_48.png') }}" sizes="48x48" type="image/png" />
+  <link rel="icon" href="{{ asset('images/favicon/favicon_64.png') }}" sizes="64x64" type="image/png" />
   <!--iphoneのアプリアイコン指定-->
   <link rel="apple-touch-icon-precomposed" href="画像のURL" />
   <!--OGPタグ/twitterカード-->
 </head>
 <body>
   <header>
-    <h1><img src="images/atlas.png"></h1>
-    <p>Social Network Service</p>
+    <h1><img src="{{ asset('images/atlas.png') }}"></h1>
+    <h2>Social Network Service</h2>
   </header>
   <div id="container">
     @yield('content')
